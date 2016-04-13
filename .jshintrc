@@ -1,0 +1,10 @@
+{
+  "curly": true,  //curly: 大括号包裹
+  "eqeqeq": true, //eqeqeq: 对于简单类型，使用===和!==，而不是==和!=
+  "newcap": true, //newcap: 对于首字母大写的函数（声明的类），强制使用new
+  "noarg": true,  //noarg: 禁用arguments.caller和arguments.callee
+  "sub": true,    //sub: 对于属性使用aaa.bbb而不是aaa['bbb']
+  "undef": false, //undef: 查找所有未定义变量
+  "unused": false,//undef: 查找所有定义了但是没被用的变量
+  "boss": true   //boss: 查找类似与if(a = 0)这样的代码
+}

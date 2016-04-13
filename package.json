@@ -1,0 +1,41 @@
+{
+  "name": "KONIC",
+  "version": "1.0.0",
+  "description": "Ionic Frontend Program",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "KONIC(MMP)",
+  ],
+  "author": "kkspace",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*",
+    "del": "*",
+    "gulp-clean-css": "*",
+    "gulp-imagemin": "*",
+    "imagemin-pngcrush": "*",
+    "gulp-sequence": "*",
+    "gulp-jshint": "*",
+    "gulp-rev":"*",
+    "gulp-rev-collector":"*"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*",
+    "del": "*",
+    "gulp-clean-css": "*",
+    "gulp-imagemin": "*",
+    "imagemin-pngcrush": "*",
+    "gulp-sequence": "*",
+    "gulp-jshint": "*",
+    "gulp-rev":"*",
+    "gulp-rev-collector":"*"
+  }
+}
