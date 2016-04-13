@@ -13,6 +13,7 @@
     "gulp-imagemin": "*",
     "imagemin-pngcrush": "*",
     "gulp-sequence": "*",
+    "jshint": "*",
     "gulp-jshint": "*",
     "gulp-rev":"*",
     "gulp-rev-collector":"*"
@@ -27,6 +28,7 @@
     "gulp-imagemin": "*",
     "imagemin-pngcrush": "*",
     "gulp-sequence": "*",
+    "jshint": "*",
     "gulp-jshint": "*",
     "gulp-rev":"*",
     "gulp-rev-collector":"*"
