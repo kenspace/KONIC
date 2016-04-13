@@ -1,45 +1,88 @@
-angular.module('starter.services', [])
-    .factory('Chats', ['$rootScope',function ($rootScope) {
-        var chats = [{
-            id: 0,
-            name: 'Ben Sparrow',
-            lastText: 'You on your way?',
-            face: 'img/ben.png'
-        }, {
-            id: 1,
-            name: 'Max Lynx',
-            lastText: 'Hey, it\'s me',
-            face: 'img/max.png'
-        }, {
-            id: 2,
-            name: 'Adam Bradleyson',
-            lastText: 'I should buy a boat',
-            face: 'img/adam.jpg'
-        }, {
-            id: 3,
-            name: 'Perry Governor',
-            lastText: 'Look at my mukluks!',
-            face: 'img/perry.png'
-        }, {
-            id: 4,
-            name: 'Mike Harrington',
-            lastText: 'This is wicked good ice cream.',
-            face: 'img/mike.png'
-        }];
+services
+    .factory('Postman', ['$http', '$q', function ($http, $q) {
         return {
-            all: function () {
-                return chats;
+            httpGet: function (action, param) {
+                var deferred = $q.defer();
+                $http.get(KONIC.config.URL + action, {params: param})
+                    .success(function (data) {
+                        KONIC.debug(data, action + " Success");
+                        deferred.resolve(data);
+                    })
+                    .error(function (data) {
+                        KONIC.debug(data, action + " Error");
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
             },
-            remove: function (chat) {
-                chats.splice(chats.indexOf(chat), 1);
+
+            httpGetUrl: function (url, param) {
+                var deferred = $q.defer();
+                $http.get(url, {params: param})
+                    .success(function (data) {
+                        KONIC.debug(data, url + " Success");
+                        deferred.resolve(data);
+                    })
+                    .error(function (data) {
+                        KONIC.debug(data, url + " Error");
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
             },
-            get: function (chatId) {
-                for (var i = 0; i < chats.length; i++) {
-                    if (chats[i].id === parseInt(chatId)) {
-                        return chats[i];
-                    }
-                }
-                return null;
+
+            httpPost: function (action, param, headers) {
+                var deferred = $q.defer();
+                $http.post(KONIC.config.URL + action, param, {headers: headers})
+                    .success(function (data) {
+                        KONIC.debug(data, action + " Success");
+                        deferred.resolve(data);
+                    })
+                    .error(function (data) {
+                        KONIC.debug(data, action + " Error");
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
+            },
+
+            httpPostUrl: function (url, param, headers) {
+                var deferred = $q.defer();
+                $http.post(url, param, {headers: headers})
+                    .success(function (data) {
+                        KONIC.debug(data, url + " Success");
+                        deferred.resolve(data);
+                    })
+                    .error(function (data) {
+                        KONIC.debug(data, url + " Error");
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
+            },
+
+            httpPut: function (action, param) {
+                var deferred = $q.defer();
+                $http.put(KONIC.config.URL + action, param)
+                    .success(function (data) {
+                        KONIC.debug(data, action + " Success");
+                        deferred.resolve(data);
+                    })
+                    .error(function (data) {
+                        KONIC.debug(data, action + " Error");
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
+            },
+
+            httpDelete: function (action, param) {
+                var deferred = $q.defer();
+                $http.delete(KONIC.config.URL + action, {params: param})
+                    .success(function (data) {
+                        KONIC.debug(data, action + " Success");
+                        deferred.resolve(data);
+                    })
+                    .error(function (data) {
+                        KONIC.debug(data, action + " Error");
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
             }
         };
     }]);

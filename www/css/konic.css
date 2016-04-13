@@ -1,0 +1,44 @@
+/* 取消 ionic 在IOS平台上自动增加40px的高度间距，实现android与ios效果一致 */
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
+    height: 44px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
+    margin-top: 0;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+    margin-top: 1px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
+    top: 44px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .has-header, .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader {
+    top: 44px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .has-subheader {
+    top: 88px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top {
+    top: 93px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
+    top: 137px;
+}
+.platform-ios.platform-cordova.status-bar-hide {
+    margin-bottom: 20px;
+}
+
+/*自定义样式*/
+.nav-bar-button {/*头部按钮样式*/
+    margin: 0;
+    padding: 0 10px;
+    font:24px/34px arial,verdana;
+    color: #fff;
+    text-align: center;
+    background: transparent;
+    border: 0;
+}
+
+.nav-bar-button.activated {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
