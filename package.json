@@ -1,15 +1,8 @@
 {
-  "name": "KONIC",
+  "name": "konic",
   "version": "1.0.0",
-  "description": "Ionic Frontend Program",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "KONIC(MMP)",
-  ],
-  "author": "kkspace",
-  "license": "ISC",
+  "description": "ionic v1.24 with gulp",
+  "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "*",
     "gulp-concat": "*",
@@ -37,5 +30,21 @@
     "gulp-jshint": "*",
     "gulp-rev":"*",
     "gulp-rev-collector":"*"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenspace/Konic.git"
+  },
+  "keywords": [
+    "konic"
+  ],
+  "author": "ken",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenspace/Konic/issues"
+  },
+  "homepage": "https://github.com/kenspace/Konic#readme"
 }
