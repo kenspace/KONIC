@@ -23,7 +23,7 @@ var KONIC = {
                 return;
         }
     },
-    debug: function () {
+    debug: function (data, method) {
         'use strict';
         var methodName = method ? method : 'SYSTEM';
         if (this.config.alert === true) {
@@ -35,7 +35,7 @@ var KONIC = {
             console.log('');
         }
     },
-    getTime: function (afterDay) {
+    getTime: function (type, afterDay) {
         'use strict';
         var curTime = new Date();
         var afterTime = new Date();

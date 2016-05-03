@@ -1,0 +1,76 @@
+<ion-view view-title="Ionic Content" cache-view="true">
+    <ion-nav-buttons side="left">
+        <history-back></history-back>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        Ionic Content
+    </ion-nav-title>
+    <ion-content class="padding">
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-item>页面包含应用：ionContent,ionRefresher, ionInfiniteScroll</ion-item>
+        <h2>ion-content </h2>
+        <p>
+            授权: <i class="color-positive">$ionicScrollDelegate</i><br/><br/>
+            ionContent指令提供一个易用的内容区域，该区域可以用Ionic的自定义滚动视图进行配置，或浏览器内置的溢出滚动。<br/><br/>
+            在大多数情况下，我们建议使用Ionic的定制滚动功能，有时（出于性能原因）仅用浏览器原生的溢出滚动就足够了，因此我可以轻松地在设置了Ionic滚动和溢出滚动间切换。<br/><br/>
+            你可以用<i class="color-positive">ionRefresher</i>指令实现拉动刷新，并可以用<i class="color-positive">ionInfiniteScroll</i>指令实现无限滚动。<br/><br/>
+        </p>
+        <h4>ion-content用法</h4>
+        <p>
+            &lt;ion-content
+                    delegate-handle=""
+                    padding=""
+                    scroll=""
+                    overflow-scroll=""
+                    has-bouncing=""
+                    on-scroll=""
+                    on-scroll-complete=""&gt;
+                    这部分写内容
+            &lt;/ion-content&gt;
+        </p>
+        <h4>ion-contentAPI</h4>
+        <p>
+            <i class="color-positive">delegate-handle</i>
+            (可选)
+            字符串<br/>
+            该句柄用于标识带有$ionicScrollDelegate的滚动视图。<br/><br/>
+
+            <i class="color-positive">padding</i>
+            (可选)
+            布尔值<br/>
+            是否在内容上添加内填充。在iOS上默认为true，在Android上为false。<br/><br/>
+
+            <i class="color-positive">scroll</i>
+            (可选)
+            布尔值<br/>
+            是否允许内容滚动。默认为true。<br/><br/>
+
+            <i class="color-positive">overflow-scroll</i>
+            (可选)
+            布尔值<br/>
+            是否用溢出滚动代替Ionic滚动。<br/><br/>
+
+            <i class="color-positive">has-bouncing</i>
+            (可选)
+            布尔值<br/>
+            是否允许内容滚动反弹到边缘。iOS上默认为true，Android上默认为false。<br/><br/>
+
+            <i class="color-positive">on-scroll</i>
+            (可选)
+            表达式<br/>
+            当内容滚动时表现的评估。<br/><br/>
+
+            <i class="color-positive">on-scroll-complete</i>
+            (可选)
+            表达式<br/>
+            一个滚动动作完成时表现的评估。<br/><br/>
+        </p>
+        <ion-infinite-scroll
+                icon="ion-loading-c"
+                on-infinite="loadMoreData()">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

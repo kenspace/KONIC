@@ -59,12 +59,30 @@ angular.module('konic', ['ionic', 'konic.controllers', 'konic.services', 'konic.
                     }
                 }
             })
-            .state('tab.chats', {
+            .state('tab.directives', {
                 url: '/directives',
                 views: {
                     'tab-directives': {
                         templateUrl: 'templates/directives.html',
                         controller: 'DirectivesCtrl'
+                    }
+                }
+            })
+            .state('tab.ionic', {
+                url: '/ionic-directives',
+                views: {
+                    'tab-directives': {
+                        templateUrl: 'templates/directives/ionic.html',
+                        controller: 'IonicDirectivesCtrl'
+                    }
+                }
+            })
+            .state('tab.ionic-content', {
+                url: '/ionic-content',
+                views: {
+                    'tab-directives': {
+                        templateUrl: 'templates/directives/ionic/content.html',
+                        controller: 'IonicContentCtrl'
                     }
                 }
             })
